@@ -12,6 +12,7 @@
   --text-color-3: #a9a9a9;
   --link-color: #41adff;
   --background-color: #202b38;
+  --background-color-2: #283947;
   --scrollbar-track-color: #161f27;
   --scrollbar-thumb-color: #324759;
   --code-color: #ffbe85;
@@ -236,8 +237,12 @@ th {
   border-bottom: 1px solid var(--text-color);
 }
 
+
 tbody {
-  background-color: var(--scrollbar-track-color);
+  background-color: var(--background-color-2);
+}
+tbody tr:nth-child(even) {
+  background-color: var(--scrollbar-thumb-color);
 }
 
 ::-webkit-scrollbar {
