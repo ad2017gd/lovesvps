@@ -11,5 +11,8 @@ module.exports = function(app){
     app.get('/info', function(req, res){
         res.render('info');
     });
+    app.get('/contact', function(req, res){
+        res.render('contact');
+    });
 
 }

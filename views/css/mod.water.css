@@ -92,16 +92,16 @@ address {
   font-style: normal;
 }
 
-a[href^='mailto']::before {
-  content: '📧 ';
+a[href^='mailto']::after {
+  content: ' 📧 ';
 }
 
-a[href^='tel']::before {
-  content: '📞 ';
+a[href^='tel']::after {
+  content: ' 📞 ';
 }
 
-a[href^='sms']::before {
-  content: '💬 ';
+a[href^='sms']::after {
+  content: ' 💬 ';
 }
 
 button,
