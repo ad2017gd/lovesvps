@@ -1,0 +1,9 @@
+{
+    "email": {
+        "host": "mail.cock.li",
+        "port": 465,
+        "secr": true,
+        "user": "lovescock@cock.email",
+        "pass": "***REDACTED***"
+    }
+}
