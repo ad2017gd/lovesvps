@@ -2,7 +2,7 @@ $(document).ready(() => {
 
 
 
-$('body').prepend(`
+    $('body').prepend(`
 
 <ul class="navbar">
     <li><a href="/">Home</a></li>
@@ -12,7 +12,7 @@ $('body').prepend(`
 
 `)
 
-$(`.navbar li a[href='${window.location.pathname}']`).parent().addClass("ne-active")
-$(`.navbar li a[href='/']`).parent().addClass("ne-pad")
+    $(`.navbar li a[href='${window.location.pathname}']`).parent().addClass("ne-active")
+    $(`.navbar li a[href='/']`).parent().addClass("ne-pad")
 
 })

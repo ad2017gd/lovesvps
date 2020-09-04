@@ -4,7 +4,7 @@ require('./js/routes')(app)
 
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
-
+/*
 require("greenlock-express")
     .init({
         packageRoot: __dirname,
@@ -13,5 +13,6 @@ require("greenlock-express")
         cluster: false
     })
     .serve(app);
+*/
 
-//app.listen(5000)
+app.listen(5000)
