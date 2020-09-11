@@ -1,5 +1,10 @@
-@import url("/mod.water.css");
 
+* {
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing:inherit
+}
 
 .navbar {
     left: 0;
@@ -16,7 +21,7 @@
     display: inline;
     float: left;
 }
-.navbar li a {
+.navbar li *:not(img), .ne-user li *:not(img) {
     display: block;
     padding:  12px 16px;
     font-size: 18px;
@@ -24,8 +29,47 @@
     background-color: var(--scrollbar-track-color);
     text-decoration: none;
 }
-.navbar li a:hover {
+.navbar li a:hover, .ne-hov:hover {
     background-color: var(--scrollbar-thumb-color);
+}
+.navbar li:nth-child(4) ~ li {
+    float: right;
+}
+.ne-button div {
+    vertical-align: top;
+    align-content: center;
+    height: 1.37em;
+    display: none !important;
+}
+.ne-button div img {
+    display:block;
+    margin:auto;
+}
+@media only screen and (max-width: 650px) {
+    .ne-button div {
+        display: flex !important;
+    }
+    .navbar li:nth-child(1) ~ *:not(.ne-user):not(.ne-button){
+        display: none;
+    }
+    .navbar .ne-user {
+        display: block;
+    }
+    .navbar.resp .ne-user {
+        display: none;
+    }
+    .navbar.resp li:not(.ne-user) {
+        float: none !important;
+        display: block !important;
+    }
+    .navbar.resp .ne-button {
+        text-align: center;
+        display: inline-block !important;
+    }
+    .navbar.resp .ne-button div {
+        display: flex !important;
+        width: 100%
+    }
 }
 .ne-active a {
     background-color: var(--background-color) !important;
@@ -92,4 +136,63 @@
     width: 12%;
     text-align: center;
     padding: 8px;
+}
+table tr td:nth-child(1) {
+    text-align: center;
+    background-color: var(--background-color-2);
+    font-weight: bold;
+}
+table {
+    table-layout: fixed;
+}
+@media only screen and (max-width: 600px) {
+    table {
+        font-size: 95%;
+        width: unset;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .input-label {
+        width: 15%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .input-label {
+        width: 20%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .mobile-center {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+    }
+    .otable {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mobile-center-flex {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}
+.otable {
+    table-layout: unset;
+}
+.otable tbody tr td, th {
+    background-color: var(--background-color);
+}
+.otable tbody tr td:nth-child(3) {
+    text-align: right;
+}
+.otable tbody tr td:nth-child(1) {
+    text-align: left;
+}
+.flex-center {
+    display: inline-flex;
+    justify-content: center;
+}
+.eighty-width {
+    width: 80% !important;
 }

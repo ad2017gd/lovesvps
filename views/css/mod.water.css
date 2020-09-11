@@ -138,13 +138,10 @@ select, button {
 
 input[type='range'] {
   -webkit-appearance: none;
-  width: 32%;
+  width: 50%;
   height: 2px;
   background: var(--scrollbar-track-color);
   outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
 }
 input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -160,9 +157,6 @@ input[type='range']::-moz-range-thumb {
   background: var(--scrollbar-thumb-color);
 }
 
-input[type='range']:hover {
-  opacity: 1;
-}
 
 
 textarea {
@@ -243,10 +237,6 @@ pre > code {
   overflow-x: auto;
 }
 
-img {
-  max-width: 100%;
-}
-
 hr {
   border: none;
   border-top: 1px solid var(--text-color);
@@ -260,13 +250,13 @@ table {
 
 td, th {
   padding: 6px;
-  text-align: left;
+  text-align: center;
 }
-
+/*
 th {
   border-bottom: 1px solid var(--text-color);
 }
-
+*/
 
 tbody {
   background-color: var(--background-color-2);

@@ -4,6 +4,7 @@ const path    = require('path')
 module.exports = function(app){
     app.use('/css', express.static('views/css'))
     app.use('/js' , express.static('views/js') )
+    app.use('/assets' , express.static('views/assets') )
 
     app.get('/', function(req, res){
         res.render('index');
